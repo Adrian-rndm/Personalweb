@@ -225,7 +225,6 @@ section h2::after {
     font-size: 0.95rem;
 }
 
-/* Projects Section */
 #projects {
     max-width: 100%;
 }
@@ -451,7 +450,6 @@ footer {
     color: #94a3b8;
 }
 
-/* Mobile Navigation */
 .nav-toggle {
     display: none;
     background: none;
@@ -461,7 +459,6 @@ footer {
     cursor: pointer;
 }
 
-/* Lightbox Styles */
 .lightbox {
     display: none;
     position: fixed;
@@ -515,7 +512,6 @@ footer {
     color: #ff6b6b;
 }
 
-/* Project image cursor pointer */
 .project-img-preview {
     cursor: pointer;
     transition: transform 0.3s ease;
