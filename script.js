@@ -5,12 +5,10 @@ document.querySelectorAll('nav a').forEach(anchor => {
         if (target) {
             target.scrollIntoView({ behavior: 'smooth' });
         }
-        // Close mobile menu when a link is clicked
         document.getElementById('navMenu').classList.remove('active');
     });
 });
 
-// Hamburger menu toggle
 const navToggle = document.getElementById('navToggle');
 const navMenu = document.getElementById('navMenu');
 
@@ -56,7 +54,6 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
     }, 2000);
 });
 
-// Add smooth scrolling for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
         e.preventDefault();
@@ -67,32 +64,27 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Lightbox functionality
 const lightbox = document.getElementById('lightbox');
 const lightboxImg = document.getElementById('lightbox-img');
 const lightboxClose = document.querySelector('.lightbox-close');
 
-// Open lightbox when clicking project images
 document.querySelectorAll('.project-img-preview').forEach(img => {
     img.addEventListener('click', function() {
         lightboxImg.src = this.src;
         lightboxImg.alt = this.alt;
         lightbox.classList.add('active');
-        document.body.style.overflow = 'hidden'; // Prevent background scrolling
+        document.body.style.overflow = 'hidden'; 
     });
 });
 
-// Close lightbox when clicking close button
 lightboxClose.addEventListener('click', closeLightbox);
 
-// Close lightbox when clicking outside the image
 lightbox.addEventListener('click', function(e) {
     if (e.target === lightbox) {
         closeLightbox();
     }
 });
 
-// Close lightbox with Escape key
 document.addEventListener('keydown', function(e) {
     if (e.key === 'Escape' && lightbox.classList.contains('active')) {
         closeLightbox();
@@ -101,5 +93,5 @@ document.addEventListener('keydown', function(e) {
 
 function closeLightbox() {
     lightbox.classList.remove('active');
-    document.body.style.overflow = ''; // Restore scrolling
+    document.body.style.overflow = '';
 }
